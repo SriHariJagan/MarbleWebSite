@@ -1,6 +1,6 @@
 .container{
   width: 100%;
-  min-height: 100vh;
+  min-height: max-content;
   padding: 0 6rem;
 }
 
@@ -177,7 +177,7 @@
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .container{
   padding: 0 0rem;
 }

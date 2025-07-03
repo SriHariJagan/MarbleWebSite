@@ -192,7 +192,7 @@
 }
 
 /* Responsive logic */
-@media (min-width: 800px) {
+@media (min-width: 1025px) {
   .desktopNav {
     display: block;
   }

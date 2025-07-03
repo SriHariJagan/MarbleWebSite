@@ -21,6 +21,7 @@
   box-shadow: 0 4px 12px var(--card-shadow);
   text-align: center;
   width: 280px;
+  width: 40%;
   position: relative;
   transition: transform 0.3s ease;
 }
@@ -83,39 +84,36 @@
   overflow: hidden;
 }
 
-.newsletterSection{
+.newsletterSection {
+  input {
+    flex: 1;
+    padding: 16px;
+    border: none;
+    font-size: 16px;
+    border-radius: 40px 0 0 40px;
+    outline: none;
+  }
 
-input {
-  flex: 1;
-  padding: 16px;
-  border: none;
-  font-size: 16px;
-  border-radius: 40px 0 0 40px;
-  outline: none;
+  button {
+    background-color: #2e2e2e;
+    color: white;
+    border: none;
+    padding: 0 30px;
+    font-size: 16px;
+    border-radius: 0 40px 40px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background-color: var(--button-primary);
+  }
 }
-
-button {
-  background-color: #2e2e2e;
-  color: white;
-  border: none;
-  padding: 0 30px;
-  font-size: 16px;
-  border-radius: 0 40px 40px 0;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background-color: var(--button-primary);
-}
-
-}
-
 
 /* Tablet adjustments */
 @media (max-width: 768px) {
   .contactInfoContainer {
-    padding: 1rem;
+    padding: 1.5rem 0;
   }
 
   .form {
@@ -123,20 +121,21 @@ button:hover {
     max-width: 100%;
   }
 
-
-  .newsletterSection{
-
-  input {
-    padding: 14px;
-    font-size: 14px;
+  .infoSection {
+    top: 20px;
   }
 
-  button {
-    padding: 0 20px;
-    font-size: 14px;
-  }
+  .newsletterSection {
+    input {
+      padding: 14px;
+      font-size: 14px;
+    }
 
-}
+    button {
+      padding: 0 20px;
+      font-size: 14px;
+    }
+  }
 }
 
 /* Mobile adjustments */
@@ -144,6 +143,10 @@ button:hover {
   .cardsWrapper {
     flex-direction: column;
     align-items: center;
+  }
+
+  .infoSection {
+    top: 40px;
   }
 
   .card {
@@ -161,19 +164,17 @@ button:hover {
     overflow: visible;
   }
 
+  .newsletterSection {
+    input {
+      /* border-radius: 20px; */
+      margin-bottom: 10px;
+    }
 
-  .newsletterSection{
-  input {
-    /* border-radius: 20px; */
-    margin-bottom: 10px;
+    button {
+      border-radius: 0;
+      border-bottom-right-radius: 20px;
+      width: 100%;
+      padding: 10px 0;
+    }
   }
-
-  button {
-    border-radius: 0;
-    border-bottom-right-radius: 20px;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-}
 }
