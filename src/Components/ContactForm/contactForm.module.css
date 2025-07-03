@@ -1,0 +1,61 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.row> input,
+.row> select,
+ textarea {
+  flex: 1;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: var(--card-bg);
+  color: var(--card-text);
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.codeBox {
+  background-color: var(--card-bg);
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: var(--card-text);
+  min-width: 60px;
+  text-align: center;
+}
+
+.submitBtn {
+  padding: 12px 20px;
+  background-color: var(--button-secondary);
+  color: var(--button-text);
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: var(--button-primary);
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: -8px;
+}

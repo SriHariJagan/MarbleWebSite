@@ -1,0 +1,286 @@
+.container {
+  width: 100%;
+  padding: 4rem 6vw;
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+.cardContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.cardImage {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+}
+
+.cardImage img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px var(--card-shadow);
+  transition: transform 0.4s ease;
+}
+
+.cardImage img:hover {
+  transform: scale(1.03);
+}
+
+.cardDescription {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cardDescription h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--highlight-color);
+}
+
+.cardDescription p {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--card-text);
+  font-weight: 400;
+  text-align: justify;
+}
+
+.viewMoreBtn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--quota-btn-bg);
+  color: var(--quota-btn-text);
+  border: 2px solid var(--quota-btn-border);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.1);
+}
+
+.viewMoreBtn:hover {
+  background-color: var(--quota-btn-hover-bg);
+  color: var(--quota-btn-hover-text);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 188, 212, 0.2);
+}
+
+@keyframes arrowSlide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.icon {
+  display: inline-flex;
+}
+
+/* Trigger animation only on hover */
+.viewMoreBtn:hover .icon {
+  animation: arrowSlide 0.8s ease-in-out infinite;
+}
+
+.popularProductsContainer {
+  width: 100%;
+  min-height: 50vh;
+  /* background-color: aquamarine; */
+  position: relative;
+  margin-top: 60px;
+}
+
+.popularProductsHero {
+  position: absolute;
+  width: 100%;
+  height: 280px;
+  background-image: url("https://wallpapercave.com/wp/wp15184770.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Glassmorphism effect */
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: var(--glass-border);
+  box-shadow: 0 4px 20px var(--card-shadow);
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.popularProductsHero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(3px);
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.popularProductsHero > h1 {
+  color: var(--highlight-color);
+  text-shadow: 0px 0px 4px black;
+  /* font-size: 3rem; */
+  font-weight: 800;
+}
+
+.popularProductsCardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding-top: 150px;
+  z-index: 1;
+  position: relative;
+}
+
+.productCard {
+  position: relative;
+  background-color: var(--card-bg);
+  padding: 10px;
+  color: var(--card-text);
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:  0.3s;
+  z-index: 1;
+}
+
+.productCard:hover {
+  scale: 1.03;
+  box-shadow: 0 8px 20px var(--card-shadow);
+  z-index: 2; /* bring above others if overlapping */
+}
+
+
+.productCard img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+
+.productCard h3 {
+  text-align: center;
+  font-size: 1rem;
+  padding: 1rem 1rem 0.5rem;
+  font-weight: 600;
+  color: var(--primary-text);
+}
+
+.cardActions {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  gap: 10px;
+}
+
+.enquiryBtn,
+.viewBtn {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 2px solid var(--quota-btn-border);
+  transition: all 0.3s ease;
+}
+
+.enquiryBtn {
+  background-color: var(--quota-btn-bg);
+  color: var(--quota-btn-text);
+}
+
+.enquiryBtn:hover {
+  background-color: var(--quota-btn-hover-bg);
+  color: var(--quota-btn-hover-text);
+}
+
+.viewBtn {
+  background-color: transparent;
+  border: 2px solid var(--card-text);
+  color: var(--card-text);
+}
+
+.viewBtn:hover {
+  background-color: var(--button-secondary);
+  color: var(--primary-bg);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 4rem 4vw;
+  }
+
+  .cardContainer {
+    flex-direction: column;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .cardImage,
+  .cardDescription {
+    flex: 1 1 100%;
+  }
+
+  .cardDescription {
+    align-items: center;
+  }
+
+  .productCard {
+     border-radius: 8px;
+  }
+}
+
+
+@media (max-width: 508px) {
+
+.container {
+    width: 100%;
+    padding: 4rem 0rem;
+  }
+
+  .cardContainer{
+    padding-inline: 1rem;
+    overflow: hidden;
+  }
+  
+
+  .popularProductsHero{
+    border-radius: 0;
+  } 
+
+  .popularProductsHero h1{
+    font-size: 2rem;
+  }
+
+  .productCard {
+    width: 80%;
+  }
+}

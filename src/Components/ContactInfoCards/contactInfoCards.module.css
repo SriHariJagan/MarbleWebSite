@@ -1,0 +1,120 @@
+.contactInfoContainer{
+  padding: 2rem 0rem;
+}
+
+
+.infoSection {
+  /* background-color: var(--primary-bg); */
+  position: relative;
+  top: 40px;
+}
+
+.cardsWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  text-align: center;
+  width: 250px;
+  position: relative;
+}
+
+.iconWrapper {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  margin: -50px auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.card h3 {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: var(--primary-text);
+}
+
+.card p {
+  color: var(--secondary-text);
+  font-size: 14px;
+}
+
+
+.newsletterSection {
+  background-color: rgb(99, 99, 99);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 250px;
+  width: 100%;
+}
+
+.newsletterSection h2 {
+  font-size: 32px;
+  color: white;
+  margin-bottom: 30px;
+  letter-spacing: 4px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  min-width: 500px;
+  max-width: 700px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+input {
+  flex: 1;
+  padding: 16px;
+  border: none;
+  font-size: 16px;
+  border-radius: 40px 0 0 40px;
+  outline: none;
+}
+
+button {
+  background-color: #2e2e2e;
+  color: white;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  border-radius: 0 40px 40px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--button-primary);
+}
+
+
+
+@media (max-width: 500px){
+  .form {
+    display: flex;
+    justify-content: center;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .card {
+    width: 280px;
+  }
+}

@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* =========================
+   Reset + Font Setup
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Poppins", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =========================
+   Light Theme Variables
+   ========================= */
+:root {
+  /* Backgrounds & Text */
+  --primary-bg: #ffffff;
+  --primary-text: #000000;
+  --secondary-text: #555555;
+
+  /* Navigation */
+  --navbar-bg: #f8f8f8;
+  --dropdown-bg: #f0f0f0;
+  --mobileMenu-bg: #ffffff;
+
+  /* Links */
+  --link-color: #000000;
+  --active-link: #0004ff;
+
+  /* Cards */
+  --card-bg: #ffffff;
+  --card-text: #000000;
+  --card-shadow: rgba(0, 0, 0, 0.15);
+  --card-hover-bg: rgba(0, 0, 0, 0.6);
+
+  /* Buttons */
+  --button-primary: #d39c45;
+  --button-secondary: #333333;
+  --button-text: #ffffff;
+
+  /* CTA Buttons */
+  --quota-btn-bg: #00bcd4;
+  --quota-btn-text: #ffffff;
+  --quota-btn-border: #00bcd4;
+  --quota-btn-hover-bg: #019bb6;
+  --quota-btn-hover-text: #ffffff;
+
+  /* Highlight Colors */
+  --highlight-color: #ff5722;
+  --heading-highlight: #222f5b;
+  --heading-botton-style: red;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.3);
+  --glass-blur: blur(15px);
+
+  /* Testimonial Buttons */
+  --testimonial-btn-bg: #393cf9;
+  --testimonial-btn-text: #ffffff;
+  --testimonial-btn-hover-bg: transparent;
+  --testimonial-btn-hover-text: white;
+  --testimonial-btn-border: #393cf9;
+}
+
+
+/* =========================
+   Dark Theme Variables
+   ========================= */
+body.dark-theme {
+  /* Backgrounds & Text */
+  --primary-bg: #121212;
+  --primary-text: #ffffff;
+  --secondary-text: #bbbbbb;
+
+  /* Navigation */
+  --navbar-bg: #1e1e1e;
+  --dropdown-bg: #2c2c2c;
+  --mobileMenu-bg: #1e1e1e;
+
+  /* Links */
+  --link-color: #eeeeee;
+  --active-link: #0004ff;
+
+  /* Cards */
+  --card-bg: #272727;
+  --card-text: #ffffff;
+  --card-shadow: rgba(255, 255, 255, 0.05);
+  --card-hover-bg: rgba(255, 255, 255, 0.1);
+
+  /* Buttons */
+  --button-primary: #d39c45;
+  --button-secondary: #f4f4f4;
+  --button-text: #5d5d5d;
+
+  /* CTA Buttons */
+  --quota-btn-bg: transparent;
+  --quota-btn-text: #00bcd4;
+  --quota-btn-border: #00bcd4;
+  --quota-btn-hover-bg: #00bcd4;
+  --quota-btn-hover-text: #ffffff;
+
+  /* Highlight Colors */
+  --highlight-color: #00e5ff;
+  --heading-highlight: #fbc232;
+  --heading-botton-style: #fbc232;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(0, 0, 0, 0.2);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(15px);
+
+  /* Testimonial Buttons */
+  --testimonial-btn-bg: #00bcd4;
+  --testimonial-btn-text: #ffffff;
+  --testimonial-btn-hover-bg: transparent;
+  --testimonial-btn-hover-text: #00bcd4;
+  --testimonial-btn-border: #00bcd4;
+}
+
+
+
+body {
+  background-color: var(--primary-bg);
+  color: var(--primary-text);
+}
+
+.pageTitle{
+  margin-top: 2rem;
+  position: relative;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+
+.pageTitle:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: var(--heading-botton-style);
+}
+.pageTitle:after {
+  width: 120px;
+  height: 2px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 5px;
+  left: 50%;
+  margin-left: -60px;
+  background-color: var(--heading-botton-style);
+}
+
+
+@keyframes arrowSlide {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 6rem;
+}
+
+@media (max-width: 800px) {
+  .container{
+  padding: 0 0rem;
+}
+}

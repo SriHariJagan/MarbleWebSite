@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Marble",
+    "subcategories": ["White Marble", "Black Marble", "Pink Marble", "Green Marble"]
+  },
+  {
+    "name": "Imported Marble",
+    "subcategories": ["Italian", "Spanish", "Turkish"]
+  },
+  {
+    "name": "Granite",
+    "subcategories": ["Red Granite", "Black Galaxy", "Kashmir White"]
+  },
+  {
+    "name": "Sandstone",
+    "subcategories": ["Teakwood", "Rainbow", "Dholpur"]
+  },
+  {
+    "name": "Tiles",
+    "subcategories": ["Ceramic", "Porcelain", "Vitrified"]
+  }
+]
