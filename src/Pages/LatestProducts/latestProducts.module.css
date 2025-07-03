@@ -182,3 +182,15 @@
   padding: 0 0rem;
 }
 }
+
+
+@media (max-width: 500px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+}

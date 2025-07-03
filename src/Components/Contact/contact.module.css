@@ -1,5 +1,5 @@
 .contactWrapper {
-  padding: 40px;
+  padding: 0 6rem;
   background-color: var(--primary-bg);
   color: var(--primary-text);
 }
@@ -38,4 +38,18 @@
 .highlight {
   color: var(--button-primary);
   border-bottom: 2px solid var(--button-primary);
+}
+
+
+@media (max-width:800px){
+  .contactWrapper {
+    padding: 0 2rem;
+  }
+}
+
+
+@media (max-width:500px){
+  .contactWrapper {
+    padding: 0 1rem;
+  }
 }

@@ -1,10 +1,8 @@
-.contactInfoContainer{
-  padding: 2rem 0rem;
+.contactInfoContainer {
+  padding: 2rem 1rem;
 }
 
-
 .infoSection {
-  /* background-color: var(--primary-bg); */
   position: relative;
   top: 40px;
 }
@@ -22,8 +20,13 @@
   border-radius: 10px;
   box-shadow: 0 4px 12px var(--card-shadow);
   text-align: center;
-  width: 250px;
+  width: 280px;
   position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .iconWrapper {
@@ -50,7 +53,6 @@
   font-size: 14px;
 }
 
-
 .newsletterSection {
   background-color: rgb(99, 99, 99);
   text-align: center;
@@ -58,27 +60,30 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 250px;
+  padding: 2rem 1rem;
   width: 100%;
 }
 
 .newsletterSection h2 {
-  font-size: 32px;
+  font-size: 28px;
   color: white;
-  margin-bottom: 30px;
-  letter-spacing: 4px;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .form {
   display: flex;
   justify-content: center;
-  min-width: 500px;
-  max-width: 700px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
   background: white;
   border-radius: 40px;
   overflow: hidden;
 }
+
+.newsletterSection{
 
 input {
   flex: 1;
@@ -104,17 +109,71 @@ button:hover {
   background-color: var(--button-primary);
 }
 
+}
 
 
-@media (max-width: 500px){
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .contactInfoContainer {
+    padding: 1rem;
+  }
+
   .form {
-    display: flex;
-    justify-content: center;
-    min-width: 100%;
+    flex-direction: row;
     max-width: 100%;
   }
 
-  .card {
-    width: 280px;
+
+  .newsletterSection{
+
+  input {
+    padding: 14px;
+    font-size: 14px;
   }
+
+  button {
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+}
+}
+
+/* Mobile adjustments */
+@media (max-width: 500px) {
+  .cardsWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .newsletterSection h2 {
+    font-size: 22px;
+  }
+
+  .form {
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: visible;
+  }
+
+
+  .newsletterSection{
+  input {
+    /* border-radius: 20px; */
+    margin-bottom: 10px;
+  }
+
+  button {
+    border-radius: 0;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+}
 }
