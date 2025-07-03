@@ -1,6 +1,6 @@
 // Navbar.jsx
 import React, { useState, useEffect, useRef } from "react";
-import styles from "./Navbar.module.css";
+import styles from "./navbar.module.css";
 import categories from "../../Constant/categories.json";
 import {
   Menu,
