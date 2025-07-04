@@ -7,7 +7,7 @@ const Contact = () => {
     <div className={styles.contactWrapper}>
       <div className={styles.contactContainer}>
         <div className={styles.imageSection}>
-          <img src="https://catalog.wlimg.com/templates-images/12585/12586/contact01.jpg" alt="Contact" />
+          <img src="/Images/get-touch.png" alt="Contact" />
         </div>
         <div className={styles.formSection}>
           <h2>

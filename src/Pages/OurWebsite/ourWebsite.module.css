@@ -13,6 +13,7 @@
   gap: 4rem;
   flex-wrap: wrap;
   overflow: hidden;
+  padding-bottom: 20px;
 }
 
 .cardImage {
@@ -23,9 +24,9 @@
 
 .cardImage img {
   width: 100%;
-  max-width: 500px;
+  max-width: 450px;
   border-radius: 12px;
-  box-shadow: 0 10px 20px var(--card-shadow);
+  box-shadow: 0 1px 20px var(--card-shadow);
   transition: transform 0.4s ease;
 }
 

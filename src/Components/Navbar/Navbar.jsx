@@ -11,11 +11,11 @@ import {
   ChevronRight,
   Sun,
   Moon,
-  X
+  X,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import classNames from "classnames";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -69,10 +69,38 @@ const Navbar = () => {
     setTimeout(() => setShowOverlay(false), 300);
   };
 
+  const [showNavbar, setShowNavbar] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
+        // Scrolling down
+        setShowNavbar(false);
+      } else {
+        // Scrolling up
+        setShowNavbar(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className={styles.navbar}>
+    <nav
+      className={classNames(styles.navbar, {
+        [styles.navHidden]: !showNavbar,
+      })}
+    >
       <div className={styles.logo}>
-        <img src="/Images/logo.png" alt="logo" width={200}/>
+        <Link to="/"><img src="/Images/logo.png" alt="logo" width={200} /></Link>
       </div>
 
       <div className={styles.desktopNav}>
@@ -80,7 +108,11 @@ const Navbar = () => {
           {staticLinks.map((link) => (
             <li key={link}>
               <NavLink
-                to={`/${link.toLowerCase().replace(/\s+/g, "")}`}
+                to={
+                  link === "Home"
+                    ? "/"
+                    : `/${link.toLowerCase().replace(/\s+/g, "")}`
+                }
                 className={({ isActive }) =>
                   isActive ? styles.activeLink : undefined
                 }
@@ -144,6 +176,17 @@ const Navbar = () => {
             );
           })}
 
+          <li>
+            <NavLink
+              to="contact"
+              className={({ isActive }) =>
+                isActive ? styles.activeLink : undefined
+              }
+            >
+              Contact Us
+            </NavLink>
+          </li>
+
           <li className={styles.searchIcon}>
             {searchOpen && (
               <motion.input
@@ -159,7 +202,10 @@ const Navbar = () => {
             <Search size={20} onClick={() => setSearchOpen(!searchOpen)} />
           </li>
 
-          <li className={styles.themeToggle} onClick={() => setDarkMode(!darkMode)}>
+          <li
+            className={styles.themeToggle}
+            onClick={() => setDarkMode(!darkMode)}
+          >
             {darkMode ? <Sun size={22} /> : <Moon size={22} />}
           </li>
         </ul>
@@ -167,10 +213,13 @@ const Navbar = () => {
 
       {/* Mobile */}
       <div className={styles.mobileNav}>
-        <Menu size={30} onClick={() => {
-          setShowOverlay(true);
-          setMobileOpen(true);
-        }} />
+        <Menu
+          size={30}
+          onClick={() => {
+            setShowOverlay(true);
+            setMobileOpen(true);
+          }}
+        />
 
         <span onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? <Sun size={22} /> : <Moon size={22} />}
@@ -200,10 +249,8 @@ const Navbar = () => {
             >
               {!activeMobileCategory ? (
                 <ul className={styles.mobileList}>
-                  <li
-                    className={styles.closeButton}
-                  >
-                    <X size={30} onClick={() => setMobileOpen(false)}/>
+                  <li className={styles.closeButton}>
+                    <X size={30} onClick={() => setMobileOpen(false)} />
                   </li>
                   {staticLinks.map((link) => (
                     <li key={link}>
