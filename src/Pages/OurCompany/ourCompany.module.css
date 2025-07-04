@@ -1,7 +1,7 @@
 /* ourCompany.module.css */
 .companySection {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 4rem 6rem;
   background-color: var(--primary-bg);
   color: var(--primary-text);
 }
@@ -17,7 +17,6 @@
 
 
 .card {
-  width: 350px;
   display: flex;
   gap: 1rem;
   background-color: var(--card-bg);
@@ -134,7 +133,6 @@
   margin-top: 2rem;
 }
 .statBox {
-  width: 100%;
   background-color: var(--card-bg);
   padding: 1rem;
   border-radius: 10px;
@@ -151,6 +149,11 @@
 
 /* Responsive */
 @media (max-width: 1000px) {
+  .companySection {
+    padding-top: 2rem;
+  }
+
+  
   .cardRow {
     align-items: center;
   }
@@ -163,7 +166,7 @@
 @media (max-width: 500px) {
   .companySection {
     width: 100%;
-    padding: 4rem 1.5rem;
+    padding: 1rem 1.5rem;
   }
   .statsGrid {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
