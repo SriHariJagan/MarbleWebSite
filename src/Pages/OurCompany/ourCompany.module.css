@@ -1,7 +1,7 @@
 /* ourCompany.module.css */
 .companySection {
   width: 100%;
-  padding: 4rem 6rem;
+  padding: 1.5rem 6rem;
   background-color: var(--primary-bg);
   color: var(--primary-text);
 }
@@ -124,7 +124,6 @@
 /* 3. Glimpse Section */
 .glimpse {
   text-align: center;
-  padding-top: 2rem;
 }
 .statsGrid {
   display: grid;
