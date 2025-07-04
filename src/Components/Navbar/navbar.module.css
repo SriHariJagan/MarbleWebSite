@@ -5,11 +5,17 @@
   padding: 1rem 1.5rem;
   background-color: var(--navbar-bg);
   color: var(--primary-text);
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 100;
-  /* box-shadow: 0 0 4px .2px var(--primary-text); */
-  font-weight: 500;
+  transition: transform 0.3s ease-in-out;
 }
+
+.navHidden {
+  transform: translateY(-100%);
+}
+
 
 .logo {
   font-size: 1.5rem;

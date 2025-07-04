@@ -36,17 +36,22 @@
   cursor: pointer;
 }
 
-.bottomBar {
-  text-align: center;
+.bottomFooter {
   font-size: 13px;
   color: var(--secondary-text);
   border-top: 1px solid var(--card-shadow);
   padding-top: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
+
 
 .pipe {
   color: var(--highlight-color);
 }
+
 
 /* Mobile Responsive */
 @media (max-width: 800px) {
@@ -72,5 +77,10 @@
     grid-template-columns: 1fr 1fr;
     font-size: 12px;
     text-align: left;
+  }
+
+  .bottomFooter {
+    flex-direction: column;
+    gap: 20px;
   }
 }

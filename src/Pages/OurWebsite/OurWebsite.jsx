@@ -40,7 +40,7 @@ const OurWebsite = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <img
-            src="https://catalog.wlimg.com/about-image/about-03.jpg"
+            src="/Images/whyUs.jpg"
             alt="aboutIMg"
           />
         </motion.div>
