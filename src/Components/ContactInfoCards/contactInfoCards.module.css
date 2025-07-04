@@ -1,10 +1,10 @@
 .contactInfoContainer {
-  padding: 2rem 1rem;
+  padding: 2rem 0rem;
 }
 
 .infoSection {
   position: relative;
-  top: 40px;
+  top: 20px;
 }
 
 .cardsWrapper {
