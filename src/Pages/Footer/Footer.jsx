@@ -66,7 +66,7 @@ const Footer = () => {
           <p>
             All Rights Reserved. <strong>JK GRANI MARMO</strong>
           </p>
-          <p>Developed & Managed By Weblink.In Pvt. Ltd.</p>
+          <p>Developed & Managed By NayaDrishti</p>
         </div>
 
         <img src="https://catalog.wlimg.com/main-common/ei.webp" alt="coptWrites"  width={120}/>
