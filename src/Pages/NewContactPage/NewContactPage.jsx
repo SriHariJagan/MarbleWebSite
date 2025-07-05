@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './newContactPage.module.css';
 import ContactForm from '../../Components/ContactForm/ContactForm';
-import { MapPin, Mail, Phone, Globe } from 'lucide-react';
+import { MapPin, Mail, Phone, Globe, CircleUser } from 'lucide-react';
 
 const NewContactPage = () => {
   return (
@@ -11,17 +11,25 @@ const NewContactPage = () => {
         <div className={styles.leftSection}>
           <p className={styles.subheading}>Welcome to</p>
           <h2 className={styles.title}>JK GRANI MARMO</h2>
-          <p className={styles.description}>
+          {/* <p className={styles.description}>
             Behind RK Indian Oil Petrol Pump, Makrana Road, Kishangarh,<br />
             Ajmer, Rajasthan, India - 305801
-          </p>
+          </p> */}
 
           <div className={styles.contactDetails}>
+            <div className={styles.detailItem}>
+              <CircleUser size={24} className={styles.icon} />
+              <div>
+                <h4>Contact Person</h4>
+                <p>Shubham Vaishnav</p>
+              </div>
+            </div>
+            <hr />
             <div className={styles.detailItem}>
               <MapPin size={24} className={styles.icon} />
               <div>
                 <h4>Address</h4>
-                <p>Makrana Road, Kishangarh, Ajmer, Rajasthan - 305801</p>
+                <p>Behind RK Indian Oil Petrol Pump, Makrana Road, Kishangarh, Ajmer, Rajasthan, India - 305801</p>
               </div>
             </div>
             <hr />
