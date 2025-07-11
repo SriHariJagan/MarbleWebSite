@@ -37,14 +37,6 @@ const App = () => {
 
   // Wait for all images and videos to load
  useEffect(() => {
-  // Handle dark mode toggle
-  if (darkMode) {
-    document.body.classList.add("dark-theme");
-  } else {
-    document.body.classList.remove("dark-theme");
-  }
-
-  // Handle loading screen for minimum time
   const MIN_LOAD_TIME = 5000;
   const startTime = Date.now();
 
@@ -91,8 +83,7 @@ const App = () => {
       }
     }
   });
-}, [darkMode]);
-
+}, []);
 
 
 
