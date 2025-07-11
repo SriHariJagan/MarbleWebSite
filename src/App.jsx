@@ -38,7 +38,7 @@ const App = () => {
   // Wait for all images and videos to load
   useEffect(() => {
     const handleLoad = () => setLoading(false);
-    const timeout = setTimeout(handleLoad, 3000); // fallback timeout
+    const timeout = setTimeout(handleLoad, 6000); // fallback timeout
 
     const media = [...document.images, ...document.querySelectorAll("video")];
     let loadedCount = 0;
