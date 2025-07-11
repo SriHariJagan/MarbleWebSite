@@ -36,7 +36,7 @@ const App = () => {
   const closeForm = () => setShowForm(false);
 
   // Wait for all images and videos to load
- useEffect(() => {
+useEffect(() => {
   // Handle dark mode toggle
   if (darkMode) {
     document.body.classList.add("dark-theme");
@@ -59,17 +59,23 @@ const App = () => {
     }
   };
 
-  const images = Array.from(document.images);
-  const videos = Array.from(document.querySelectorAll("video"));
-  const media = [...images, ...videos];
-
-  if (media.length === 0) return handleLoad();
-
+  const media = [...document.images, ...document.querySelectorAll("video")];
   let loadedCount = 0;
+
+  // Fallback timeout (e.g., 6 seconds max)
+  const timeout = setTimeout(() => {
+    if (loading) setLoading(false);
+  }, 6000);
+
+  if (media.length === 0) {
+    clearTimeout(timeout);
+    return handleLoad();
+  }
 
   const checkAllLoaded = () => {
     loadedCount++;
     if (loadedCount === media.length) {
+      clearTimeout(timeout);
       handleLoad();
     }
   };
@@ -91,6 +97,9 @@ const App = () => {
       }
     }
   });
+
+  // Cleanup
+  return () => clearTimeout(timeout);
 }, [darkMode]);
 
 
