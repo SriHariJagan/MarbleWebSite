@@ -36,37 +36,79 @@ const App = () => {
   const closeForm = () => setShowForm(false);
 
   // Wait for all images and videos to load
-  useEffect(() => {
-    const handleLoad = () => setLoading(false);
-    const timeout = setTimeout(handleLoad, 6000); // fallback timeout
+useEffect(() => {
+  // Handle dark mode toggle
+  if (darkMode) {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
 
-    const media = [...document.images, ...document.querySelectorAll("video")];
-    let loadedCount = 0;
+  // Handle loading screen for minimum time
+  const MIN_LOAD_TIME = 5000;
+  const startTime = Date.now();
 
-    if (media.length === 0) return handleLoad();
+  const handleLoad = () => {
+    const timeElapsed = Date.now() - startTime;
+    const remainingTime = MIN_LOAD_TIME - timeElapsed;
 
-    media.forEach((el) => {
-      if (el.complete || el.readyState === 4) {
-        loadedCount++;
+    if (remainingTime > 0) {
+      setTimeout(() => setLoading(false), remainingTime);
+    } else {
+      setLoading(false);
+    }
+  };
+
+  const media = [...document.images, ...document.querySelectorAll("video")];
+  let loadedCount = 0;
+
+  // Fallback timeout (e.g., 6 seconds max)
+  const timeout = setTimeout(() => {
+    if (loading) setLoading(false);
+  }, 6000);
+
+  if (media.length === 0) {
+    clearTimeout(timeout);
+    return handleLoad();
+  }
+
+  const checkAllLoaded = () => {
+    loadedCount++;
+    if (loadedCount === media.length) {
+      clearTimeout(timeout);
+      handleLoad();
+    }
+  };
+
+  media.forEach((el) => {
+    if (el.tagName === "VIDEO") {
+      if (el.readyState >= 3) {
+        checkAllLoaded();
       } else {
-        el.addEventListener("load", () => {
-          loadedCount++;
-          if (loadedCount === media.length) handleLoad();
-        });
-        el.addEventListener("error", () => {
-          loadedCount++;
-          if (loadedCount === media.length) handleLoad();
-        });
+        el.addEventListener("loadeddata", checkAllLoaded);
+        el.addEventListener("error", checkAllLoaded);
       }
-    });
+    } else {
+      if (el.complete) {
+        checkAllLoaded();
+      } else {
+        el.addEventListener("load", checkAllLoaded);
+        el.addEventListener("error", checkAllLoaded);
+      }
+    }
+  });
 
-    return () => clearTimeout(timeout);
-  }, []);
+  // Cleanup
+  return () => clearTimeout(timeout);
+}, [darkMode]);
+
+
+
 
   if (loading) return <LoadingScreen />;
 
   return (
-    <div className="appContainer">
+    <div className="appContainer" style={{ animation: "fadeIn 0.6s ease-in" }}>
       {!showForm && (
         <button className="enquiryFormBtn" onClick={toggleForm}>
           <ArrowBigDownDash />

@@ -1,7 +1,17 @@
 // OurCompany.jsx
 import React from "react";
 import styles from "./ourCompany.module.css";
-import { ArrowBigRightDash, Building, Rocket, ShieldCheck } from "lucide-react";
+import {
+  ArrowBigRightDash,
+  Building,
+  Rocket,
+  ShieldCheck,
+  Briefcase,
+  Users,
+  CalendarDays,
+  Globe2,
+  BadgeInfo,
+} from "lucide-react";
 import Testimonials from "../../Components/Testimonials/Testimonials";
 
 const OurCompany = () => {
@@ -26,33 +36,34 @@ const OurCompany = () => {
     },
   ];
 
-  const stats = [
-    {
-      icon: "https://www.svgrepo.com/show/532037/clouds.svg",
-      title: "Nature of Business",
-      value: "Manufacturers, Exporters, Supplier",
-    },
-    {
-      icon: "https://www.svgrepo.com/show/532037/clouds.svg",
-      title: "Number of Employees",
-      value: "50 People",
-    },
-    {
-      icon: "https://www.svgrepo.com/show/532037/clouds.svg",
-      title: "Year of Establishment",
-      value: "2022",
-    },
-    {
-      icon: "https://www.svgrepo.com/show/532037/clouds.svg",
-      title: "Market Covered",
-      value: "Worldwide",
-    },
-    {
-      icon: "https://www.svgrepo.com/show/532037/clouds.svg",
-      title: "Name of Founder",
-      value: "Mr. Sandeep Kumar Mehta, Mr. Nand Kishore Vaishnav",
-    },
-  ];
+ const stats = [
+  {
+    icon: <Briefcase size={40} strokeWidth={1.5} />,
+    title: "Nature of Business",
+    value: "Manufacturers, Exporters, Supplier",
+  },
+  {
+    icon: <Users size={40} strokeWidth={1.5} />,
+    title: "Number of Employees",
+    value: "50 People",
+  },
+  {
+    icon: <CalendarDays size={40} strokeWidth={1.5} />,
+    title: "Year of Establishment",
+    value: "2022",
+  },
+  {
+    icon: <Globe2 size={40} strokeWidth={1.5} />,
+    title: "Market Covered",
+    value: "Worldwide",
+  },
+  {
+    icon: <BadgeInfo size={40} strokeWidth={1.5} />,
+    title: "Name of Founder",
+    value: "Mr. Sandeep Kumar Mehta, Mr. Nand Kishore Vaishnav",
+  },
+];
+
 
   const clients = [
     {
@@ -120,7 +131,7 @@ const OurCompany = () => {
         <div className={styles.statsGrid}>
           {stats.map((stat, i) => (
             <div key={i} className={styles.statBox}>
-              <img src={stat.icon} alt="" className={styles.icon} />
+              <div className={styles.icon}>{stat.icon}</div>
               <h4>{stat.title}</h4>
               <p>{stat.value}</p>
             </div>

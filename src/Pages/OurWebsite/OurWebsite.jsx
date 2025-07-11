@@ -40,7 +40,7 @@ const OurWebsite = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <img
-            src="/Images/whyUs.jpg"
+            src="/Images/whyUs.png"
             alt="aboutIMg"
           />
         </motion.div>
@@ -68,7 +68,7 @@ const OurWebsite = () => {
 
       <div className={styles.popularProductsContainer}>
         <div className={styles.popularProductsHero}>
-            <h1 className="pageTitle">Popular Products</h1>
+            <h1 className="pageTitle"><b style={{ color: "var(--highlight-color)" }}>Popular</b> Products</h1>
         </div>
         <div className={styles.popularProductsCardContainer}>
           {productList.map((product, index) => (

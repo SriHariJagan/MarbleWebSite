@@ -1,6 +1,5 @@
-// Components/LoadingScreen/LoadingScreen.jsx
 import React from "react";
-import { RingLoader } from "react-spinners";
+import { GridLoader } from "react-spinners";
 
 const LoadingScreen = () => {
   const containerStyle = {
@@ -17,11 +16,12 @@ const LoadingScreen = () => {
     flexDirection: "column",
     zIndex: 9999,
     padding: "1rem",
+    animation: "fadeIn 0.4s ease-in-out"
   };
 
   return (
     <div style={containerStyle}>
-      <RingLoader color="#0fddf7" size={120} />
+      <GridLoader color="#0fddf7" size={window.innerWidth < 500 ? 80 : 40} />
     </div>
   );
 };

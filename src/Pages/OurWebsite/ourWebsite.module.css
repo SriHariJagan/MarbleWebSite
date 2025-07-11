@@ -139,10 +139,10 @@
 }
 
 .popularProductsHero > h1 {
-  color: var(--highlight-color);
+  color: white;
   text-shadow: 0px 0px 4px black;
   /* font-size: 3rem; */
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .popularProductsCardContainer {
