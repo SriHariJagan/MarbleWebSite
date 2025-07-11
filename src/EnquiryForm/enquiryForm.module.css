@@ -54,21 +54,24 @@
 
 .button {
   margin-top: 1rem;
-  background: linear-gradient(to right, #ff416c, #ff4b2b);
-  color: white;
+  background: transparent;
+  color: #2bb5ff; /* Primary text/border color */
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 600;
-  border: none;
+  border: 2px solid #2bb5ff;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
   display: inline-block;
 }
 
 .button:hover {
-  opacity: 0.9;
+  background: linear-gradient(to right, #41d0ff, #2bb5ff);
+  color: white;
+  border-color: transparent;
 }
+
 
 .dropdown {
   position: absolute;

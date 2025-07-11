@@ -1,34 +1,85 @@
 // OurCompany.jsx
-import React from 'react'
-import styles from './ourCompany.module.css'
-import { ArrowBigRightDash, Building, Rocket, ShieldCheck } from 'lucide-react'
+import React from "react";
+import styles from "./ourCompany.module.css";
+import { ArrowBigRightDash, Building, Rocket, ShieldCheck } from "lucide-react";
+import Testimonials from "../../Components/Testimonials/Testimonials";
 
 const OurCompany = () => {
   const infoCards = [
     {
       icon: <Building size={32} />,
       heading: "Our Manufacturing Facility",
-      description: "Our facility is equipped with the latest technology and machinery to ensure the highest quality of granite slabs."
+      description:
+        "Our facility is equipped with the latest technology and machinery to ensure the highest quality of granite slabs.",
     },
     {
       icon: <ShieldCheck size={32} />,
       heading: "Quality Assurance",
-      description: "JK GRANI MARMO ensures top-tier quality using cutting-edge tools and expert supervision throughout the production process."
+      description:
+        "JK GRANI MARMO ensures top-tier quality using cutting-edge tools and expert supervision throughout the production process.",
     },
     {
       icon: <Rocket size={32} />,
       heading: "Mission",
-      description: "To provide customers with high-quality products that exceed expectations while fostering a culture of excellence."
-    }
-  ]
+      description:
+        "To provide customers with high-quality products that exceed expectations while fostering a culture of excellence.",
+    },
+  ];
 
   const stats = [
-    { icon: "https://www.svgrepo.com/show/532037/clouds.svg", title: "Nature of Business", value: "Manufacturers, Exporters, Supplier" },
-    { icon: "https://www.svgrepo.com/show/532037/clouds.svg", title: "Number of Employees", value: "50 People" },
-    { icon: "https://www.svgrepo.com/show/532037/clouds.svg", title: "Year of Establishment", value: "2022" },
-    { icon: "https://www.svgrepo.com/show/532037/clouds.svg", title: "Market Covered", value: "Worldwide" },
-    { icon: "https://www.svgrepo.com/show/532037/clouds.svg", title: "Name of Founder", value: "Mr. Sandeep Kumar Mehta, Mr. Nand Kishore Vaishnav" }
-  ]
+    {
+      icon: "https://www.svgrepo.com/show/532037/clouds.svg",
+      title: "Nature of Business",
+      value: "Manufacturers, Exporters, Supplier",
+    },
+    {
+      icon: "https://www.svgrepo.com/show/532037/clouds.svg",
+      title: "Number of Employees",
+      value: "50 People",
+    },
+    {
+      icon: "https://www.svgrepo.com/show/532037/clouds.svg",
+      title: "Year of Establishment",
+      value: "2022",
+    },
+    {
+      icon: "https://www.svgrepo.com/show/532037/clouds.svg",
+      title: "Market Covered",
+      value: "Worldwide",
+    },
+    {
+      icon: "https://www.svgrepo.com/show/532037/clouds.svg",
+      title: "Name of Founder",
+      value: "Mr. Sandeep Kumar Mehta, Mr. Nand Kishore Vaishnav",
+    },
+  ];
+
+  const clients = [
+    {
+      name: "Google",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg",
+    },
+    {
+      name: "Accenture",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Accenture_Logo.svg",
+    },
+    {
+      name: "Microsoft",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+    },
+    {
+      name: "Amazon",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+    },
+    {
+      name: "Facebook",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png",
+    },
+    {
+      name: "Apple",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg",
+    },
+  ];
 
   return (
     <div className={styles.companySection}>
@@ -49,17 +100,23 @@ const OurCompany = () => {
       <div className={styles.testimonialBanner}>
         <p>
           <em>
-            In promotion and advertising, a testimonial consists of a person’s experience in a written statement extolling the integrity of a product or services.
+            In promotion and advertising, a testimonial consists of a person’s
+            experience in a written statement extolling the integrity of a
+            product or services.
           </em>
         </p>
         <button className={styles.testimonialBtn}>
-          Post Your Testimonials <ArrowBigRightDash className={styles.arrow} size={20} />
+          Post Your Testimonials{" "}
+          <ArrowBigRightDash className={styles.arrow} size={20} />
         </button>
       </div>
 
       {/* Glimpse Section */}
       <div className={styles.glimpse}>
-        <h2 className="pageTitle"><span style={{ color: 'var(--highlight-color)' }}>Glimpse</span> of Our Company</h2>
+        <h2 className="pageTitle">
+          <span style={{ color: "var(--highlight-color)" }}>Glimpse</span> of
+          Our Company
+        </h2>
         <div className={styles.statsGrid}>
           {stats.map((stat, i) => (
             <div key={i} className={styles.statBox}>
@@ -70,8 +127,28 @@ const OurCompany = () => {
           ))}
         </div>
       </div>
-    </div>
-  )
-}
 
-export default OurCompany
+      {/* Our Clients Scrolling Marquee */}
+      <div className={styles.clientScrollerWrapper}>
+        <h2 className="pageTitle" style={{ marginBottom: "3rem" }}>
+          <span style={{ color: "var(--highlight-color)" }}>Our</span> Clients
+        </h2>
+
+        <div className={styles.clientScroller}>
+          <div className={styles.clientTrack}>
+            {/* Repeat sample logos or placeholders here */}
+            {[...clients, ...clients].map((client, i) => (
+              <div className={styles.clientLogo} key={i}>
+                <img src={client.logo} alt={client.name} title={client.name} />
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <Testimonials />
+    </div>
+  );
+};
+
+export default OurCompany;

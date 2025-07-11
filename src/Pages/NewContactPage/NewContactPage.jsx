@@ -60,13 +60,13 @@ const NewContactPage = () => {
                     www.jkgranimarmo.co.in
                   </a>
                   <br />
-                  <a href="https://www.exportersindia.com/shubham-marbles/" target="_blank" rel="noreferrer">
+                  {/* <a href="https://www.exportersindia.com/shubham-marbles/" target="_blank" rel="noreferrer">
                     ExportersIndia
                   </a>
                   <br />
                   <a href="https://www.indianyellowpages.com/ajmer/shubham-marbles-kishangarh-ajmer-5734427/" target="_blank" rel="noreferrer">
                     YellowPages
-                  </a>
+                  </a> */}
                 </p>
               </div>
             </div>

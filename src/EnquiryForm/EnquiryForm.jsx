@@ -30,6 +30,7 @@ const products = [
   "Tiger Skin Granite Slab",
   "Viscon White Granite Slab",
   "Zidane Black Granite Slab",
+  "Other"
 ];
 
 const EnquiryForm = () => {
@@ -38,6 +39,7 @@ const EnquiryForm = () => {
     description: "",
     name: "",
     mobile: "",
+    email: ""
   });
 
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -118,6 +120,19 @@ const EnquiryForm = () => {
             value={form.name}
             onChange={handleChange}
             placeholder="Your name"
+          />
+        </div>
+      </div>
+
+       <div className={styles.row}>
+        <div className={styles.inputGroup}>
+          <label>Email *</label>
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Email"
           />
         </div>
       </div>

@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./footer.module.css";
+import { Link } from "react-router-dom";
+import { Instagram, Linkedin, Youtube } from "lucide-react";
 
 const navLinks = [
   "Home",
@@ -10,55 +12,28 @@ const navLinks = [
   "Site Map",
 ];
 
-const graniteProducts = [
-  "P White Granite",
-  "Brown Marquina Granite Slab",
-  "Raw Silk Granite Slab",
-  "Majestic 3D Black Granite Slab",
-  "Jeerawal Granite Slab",
-  "Brown Alphonso Granite Slab",
-  "Alphonso Brown Granite Slab",
-  "Coral Pink Granite Slab",
-  "Rajasthan Black Granite Slab",
-  "Electro Brown Granite Slab",
-  "Crystal Blue Granite Slab",
-  "K White Granite Slab",
-  "Ocean Black Granite Slab",
-  "Zidane Black Granite Slab",
-  "Apple Green Granite Slab",
-  "Majestic Black Granite Slab",
-  "Tiger Skin Granite Slab",
-  "Tan Brown Granite Slab",
-  "Viscon White Granite Slab",
-  "Multi Red Granite Slab",
-  "Gem Red Granite Slab",
-  "Koliwada Granite Slab",
-  "K Red Granite Slab",
-  "Rosy Pink Granite Slab",
-  "Crystal Brown Granite Slab",
-  "Cotton Brown Granite Slab",
-  "Star Black Granite Slab",
-  "Desert Green Granite Slab",
-];
-
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.navLinks}>
         {navLinks.map((link, i) => (
-          <span key={i}>
+          <span key={i} className={styles.navItem}>
             {link}
             {i < navLinks.length - 1 && <span className={styles.pipe}>|</span>}
           </span>
         ))}
       </div>
 
-      <div className={styles.productSection}>
-        {graniteProducts.map((product, index) => (
-          <span key={index} className={styles.productItem}>
-            {product}
-          </span>
-        ))}
+      <div className={styles.mapSection}>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.704267410353!2d74.84740807488508!3d26.625924472357507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396bf1834ac2a471%3A0xbb07b44f710466d7!2sJK%20Grani%20Marmo!5e0!3m2!1sen!2sin!4v1752230576881!5m2!1sen!2sin"
+          width="100%"
+          height="350"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="JK Grani Marmo Location"
+        ></iframe>
       </div>
 
       <div className={styles.bottomFooter}>
@@ -66,10 +41,53 @@ const Footer = () => {
           <p>
             All Rights Reserved. <strong>JK GRANI MARMO</strong>
           </p>
-          <p>Developed & Managed By NayaDrishti</p>
+          <p>
+            Developed & Managed By{" "}
+            <a
+              href="https://nayadrishiti.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              NayaDrishti
+            </a>
+          </p>
         </div>
 
-        <img src="https://catalog.wlimg.com/main-common/ei.webp" alt="coptWrites"  width={120}/>
+        <div className={styles.socialWrapper}>
+          <div className={styles.socialIcons}>
+            <a
+              href="https://www.youtube.com/@JKGranimarmo"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="YouTube"
+              className={`${styles.iconCircle} ${styles.youtube}`}
+            >
+              <Youtube size={24} />
+            </a>
+            {/* <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className={`${styles.iconCircle} ${styles.linkedin}`}
+            >
+              <Linkedin size={24} />
+            </a> */}
+            <a
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className={`${styles.iconCircle} ${styles.instagram}`}
+            >
+              <Instagram size={24} />
+            </a>
+          </div>
+        </div>
+
+        <p className={styles.copyright}>
+          © {new Date().getFullYear()} JK Grani Marmo - All Rights Reserved.
+        </p>
       </div>
     </footer>
   );
