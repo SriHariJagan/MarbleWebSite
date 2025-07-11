@@ -11,6 +11,35 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track); /* Fallback if theme var not defined */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover);
+}
+
+/* Firefox (optional support for dark theme) */
+html {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: thin;
+}
+
+
 /* =========================
    Light Theme Variables
    ========================= */
@@ -36,7 +65,7 @@
   --card-hover-bg: rgba(0, 0, 0, 0.6);
 
   /* Buttons */
-  --button-primary: #d39c45;
+  --button-primary: #00bcd4;
   --button-secondary: #333333;
   --button-text: #ffffff;
 
@@ -50,7 +79,7 @@
   /* Highlight Colors */
   --highlight-color: #00e5ff;
   --heading-highlight: #2086be;
-  --heading-botton-style: #fbc232;
+  --heading-botton-style: #32e0fb;
 
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.1);
@@ -63,6 +92,11 @@
   --testimonial-btn-hover-bg: transparent;
   --testimonial-btn-hover-text: #00bcd4;
   --testimonial-btn-border: #00bcd4;
+
+  --scrollbar-track: #f0f0f0;
+  --scrollbar-thumb: #bbb;
+  --scrollbar-thumb-hover: #999;
+
 }
 
 
@@ -91,7 +125,7 @@ body.dark-theme {
   --card-hover-bg: rgba(255, 255, 255, 0.1);
 
   /* Buttons */
-  --button-primary: #d39c45;
+  --button-primary: #00bcd4;
   --button-secondary: #f4f4f4;
   --button-text: #5d5d5d;
 
@@ -105,7 +139,7 @@ body.dark-theme {
   /* Highlight Colors */
   --highlight-color: #00e5ff;
   --heading-highlight: #2086be;
-  --heading-botton-style: #fbc232;
+  --heading-botton-style: #32e0fb;
 
   /* Glassmorphism */
   --glass-bg: rgba(0, 0, 0, 0.2);
@@ -119,7 +153,12 @@ body.dark-theme {
   --testimonial-btn-hover-text: #00bcd4;
   --testimonial-btn-border: #00bcd4;
 
-  --section-bg-alt: #f9f9f9
+  --section-bg-alt: #f9f9f9;
+
+
+  --scrollbar-track: #1f1f1f;
+  --scrollbar-thumb: #444;
+  --scrollbar-thumb-hover: #666;
 }
 
 
@@ -269,6 +308,14 @@ body {
   margin-left: -60px;
   background-color: var(--heading-botton-style);
 }
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+
+
 
 
 @keyframes arrowSlide {

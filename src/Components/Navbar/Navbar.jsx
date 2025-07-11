@@ -47,13 +47,14 @@ const Navbar = () => {
     };
   }, [mobileOpen]);
 
-  useEffect(() => {
-    if (mobileOpen) {
-      document.body.classList.add(styles.noScroll);
-    } else {
-      document.body.classList.remove(styles.noScroll);
-    }
-  }, [mobileOpen]);
+ useEffect(() => {
+  if (mobileOpen || hoveredCategory !== null) {
+    document.body.classList.add(styles.noScroll);
+  } else {
+    document.body.classList.remove(styles.noScroll);
+  }
+}, [mobileOpen, hoveredCategory]);
+
 
   useEffect(() => {
     if (darkMode) {

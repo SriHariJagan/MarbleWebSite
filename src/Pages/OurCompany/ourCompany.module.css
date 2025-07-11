@@ -147,6 +147,11 @@
   margin-top: 0.2rem;
 }
 
+.icon{
+  margin: auto;
+  font-size: .5rem;
+}
+
 
 
 .clientScrollerWrapper {

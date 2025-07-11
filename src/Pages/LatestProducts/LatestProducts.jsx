@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import styles from "./latestProducts.module.css";
 import { ChevronsRight } from "lucide-react";
+import EnquiryModal from "../../Components/InstantQuote/InstantQuote"; // adjust path
 
 const products = [
   {
@@ -75,6 +76,7 @@ const cardVariants = {
 
 const LatestProducts = () => {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const handleCardTap = (index) => {
     // If tapping the same card again, close it
@@ -83,7 +85,8 @@ const LatestProducts = () => {
 
   return (
     <div className={styles.container}>
-      <h1 className="pageTitle">Latest Products</h1>
+      {showModal && <EnquiryModal onClose={() => setShowModal(false)} />}
+      <h1 className="pageTitle"> <b style={{ color: "var(--highlight-color)" }}>Latest</b> Products</h1>
       <motion.div
         className={styles.wrapper}
         initial="hidden"
@@ -141,8 +144,12 @@ const LatestProducts = () => {
       </motion.div>
 
       <div className={styles.pageEnd}>
-        <h2>We will send you the <b>Best Price Possible </b></h2>
-        <button>Get Intannt Quota <ChevronsRight className={styles.icon}/></button>
+        <h2>
+          We will send you the <b>Best Price Possible </b>
+        </h2>
+        <button onClick={() => setShowModal(true)}>
+          Get Instant Quote <ChevronsRight className={styles.icon} />
+        </button>
       </div>
     </div>
   );
