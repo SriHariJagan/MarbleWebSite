@@ -37,10 +37,11 @@
 
 .navList li {
   position: relative;
+  color: var(--primary-text);
 }
 
 .navList li a {
-  color: var(--link-color);
+  color: var(--primary-text);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -81,7 +82,7 @@
 }
 
 .dropdown li a {
-  color: var(--link-color);
+  color: var(--primary-text);
   font-size: 0.95rem;
 }
 
@@ -108,7 +109,7 @@
 }
 
 .activeLink {
-  color: var(--link-color);
+  color: var(--active-link) !important;
   font-weight: 700;
   position: relative;
   width: 100%;

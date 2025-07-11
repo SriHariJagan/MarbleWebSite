@@ -21,7 +21,7 @@ const cards = [
   {
     icon: <Monitor size={20} />,
     label: "Web",
-    value: "www.jkgranimarmo.co.in",
+    value: "www.jkgranimarmo.in",
   },
 ];
 

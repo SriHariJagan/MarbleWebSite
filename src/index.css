@@ -27,7 +27,7 @@
 
   /* Links */
   --link-color: #000000;
-  --active-link: #0004ff;
+  --active-link: #00bcd4;
 
   /* Cards */
   --card-bg: #ffffff;
@@ -48,9 +48,9 @@
   --quota-btn-hover-text: #ffffff;
 
   /* Highlight Colors */
-  --highlight-color: #ff5722;
-  --heading-highlight: #222f5b;
-  --heading-botton-style: red;
+  --highlight-color: #00e5ff;
+  --heading-highlight: #2086be;
+  --heading-botton-style: #fbc232;
 
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.1);
@@ -58,11 +58,11 @@
   --glass-blur: blur(15px);
 
   /* Testimonial Buttons */
-  --testimonial-btn-bg: #393cf9;
+  --testimonial-btn-bg: #00bcd4;
   --testimonial-btn-text: #ffffff;
   --testimonial-btn-hover-bg: transparent;
-  --testimonial-btn-hover-text: white;
-  --testimonial-btn-border: #393cf9;
+  --testimonial-btn-hover-text: #00bcd4;
+  --testimonial-btn-border: #00bcd4;
 }
 
 
@@ -82,7 +82,7 @@ body.dark-theme {
 
   /* Links */
   --link-color: #eeeeee;
-  --active-link: #0004ff;
+  --active-link: #00bcd4;
 
   /* Cards */
   --card-bg: #272727;
@@ -104,7 +104,7 @@ body.dark-theme {
 
   /* Highlight Colors */
   --highlight-color: #00e5ff;
-  --heading-highlight: #fbc232;
+  --heading-highlight: #2086be;
   --heading-botton-style: #fbc232;
 
   /* Glassmorphism */
@@ -151,6 +151,7 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
+  color: white;
 }
 
 .enquiryFormBtn:hover svg {
