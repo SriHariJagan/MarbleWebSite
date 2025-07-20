@@ -35,57 +35,62 @@ const App = () => {
   const toggleForm = () => setShowForm(!showForm);
   const closeForm = () => setShowForm(false);
 
-  // Wait for all images and videos to load
- useEffect(() => {
-  const MIN_LOAD_TIME = 5000;
-  const startTime = Date.now();
+  useEffect(() => {
+    const MIN_LOAD_TIME = 5000;
+    const startTime = Date.now();
 
-  const handleLoad = () => {
-    const timeElapsed = Date.now() - startTime;
-    const remainingTime = MIN_LOAD_TIME - timeElapsed;
+    const handleLoad = () => {
+      const timeElapsed = Date.now() - startTime;
+      const remainingTime = MIN_LOAD_TIME - timeElapsed;
 
-    if (remainingTime > 0) {
-      setTimeout(() => setLoading(false), remainingTime);
-    } else {
-      setLoading(false);
-    }
-  };
+      if (remainingTime > 0) {
+        setTimeout(() => setLoading(false), remainingTime);
+      } else {
+        setLoading(false);
+      }
+    };
 
-  const images = Array.from(document.images);
-  const videos = Array.from(document.querySelectorAll("video"));
-  const media = [...images, ...videos];
+    const media = [...document.images, ...document.querySelectorAll("video")];
+    let loadedCount = 0;
 
-  if (media.length === 0) return handleLoad();
+    const timeout = setTimeout(() => {
+      if (loading) setLoading(false);
+    }, 6000);
 
-  let loadedCount = 0;
-
-  const checkAllLoaded = () => {
-    loadedCount++;
-    if (loadedCount === media.length) {
+    if (media.length === 0) {
+      clearTimeout(timeout);
       handleLoad();
+      return;
     }
-  };
 
-  media.forEach((el) => {
-    if (el.tagName === "VIDEO") {
-      if (el.readyState >= 3) {
-        checkAllLoaded();
-      } else {
-        el.addEventListener("loadeddata", checkAllLoaded);
-        el.addEventListener("error", checkAllLoaded);
+    const checkAllLoaded = () => {
+      loadedCount++;
+      if (loadedCount === media.length) {
+        clearTimeout(timeout);
+        handleLoad();
       }
-    } else {
-      if (el.complete) {
-        checkAllLoaded();
+    };
+
+    media.forEach((el) => {
+      if (el.tagName === "VIDEO") {
+        if (el.readyState >= 3) {
+          checkAllLoaded();
+        } else {
+          el.addEventListener("loadeddata", checkAllLoaded);
+          el.addEventListener("error", checkAllLoaded);
+        }
       } else {
-        el.addEventListener("load", checkAllLoaded);
-        el.addEventListener("error", checkAllLoaded);
+        if (el.complete) {
+          checkAllLoaded();
+        } else {
+          el.addEventListener("load", checkAllLoaded);
+          el.addEventListener("error", checkAllLoaded);
+        }
       }
-    }
-  });
-}, []);
+    });
 
-
+    return () => clearTimeout(timeout);
+  }, []);
 
   if (loading) return <LoadingScreen />;
 

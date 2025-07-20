@@ -5,7 +5,6 @@
       "Makrana-Pink",
       "Silver-Storm",
       "Burberry-Grey",
-      "Bulberry-grey",
       "Opus-white",
       "Wonder-white",
       "Gold-Fire",
@@ -97,7 +96,14 @@
   },
   {
     "name": "Imported Marble",
-    "subcategories": []
+    "subcategories": [
+      "Fantasy-Grey",
+      "Peitra-Grey",
+      "William-Grey",
+      "Bottochino-Beige",
+      "Bracia-Beige",
+      "Dyna-Beige"
+    ]
   },
   {
     "name": "Granite",
@@ -122,8 +128,6 @@
   {
     "name": "Sandstone",
     "subcategories": [
-      "Kandla-Grey",
-      "Moca-Cream"
     ]
   },
   {

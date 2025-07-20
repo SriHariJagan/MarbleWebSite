@@ -1,260 +1,3 @@
-// export const productData = {
-//   marble: {
-//     'white-marble': {
-//       name: "White Marble",
-//       priceFrom: 60,
-//       priceTo: 95,
-//       moq: 1500,
-//       image: "",
-//       businessType: "Manufacturer, Exporter",
-//       material: "Marble",
-//       shape: "Rectangular",
-//       application: "Flooring, Wall Cladding",
-//       feature: "Polished, Elegant Look",
-//       thickness: "16 MM To 20 MM",
-//       surface: "Polished, Matte",
-//       origin: "India"
-//     },
-//     'black-marble': {
-//       name: "Black Marble",
-//       priceFrom: 65,
-//       priceTo: 100,
-//       moq: 1200,
-//       image: "",
-//       businessType: "Supplier",
-//       material: "Marble",
-//       shape: "Rectangular",
-//       application: "Countertops, Bathrooms",
-//       feature: "Shiny, Durable",
-//       thickness: "18 MM",
-//       surface: "Polished",
-//       origin: "India"
-//     },
-//     'pink-marble': {
-//       name: "Pink Marble",
-//       priceFrom: 55,
-//       priceTo: 85,
-//       moq: 1300,
-//       image: "",
-//       businessType: "Manufacturer",
-//       material: "Marble",
-//       shape: "Slab",
-//       application: "Interior Walls",
-//       feature: "Attractive Color, Smooth Finish",
-//       thickness: "15 MM To 18 MM",
-//       surface: "Honed",
-//       origin: "India"
-//     },
-//     'green-marble': {
-//       name: "Green Marble",
-//       priceFrom: 50,
-//       priceTo: 90,
-//       moq: 1400,
-//       image: "",
-//       businessType: "Exporter",
-//       material: "Marble",
-//       shape: "Tile",
-//       application: "Flooring",
-//       feature: "Natural Color, Anti-Slip",
-//       thickness: "16 MM",
-//       surface: "Matte",
-//       origin: "India"
-//     }
-//   },
-//   'importedmarble': {
-//     italian: {
-//       name: "Italian Marble",
-//       priceFrom: 120,
-//       priceTo: 180,
-//       moq: 2000,
-//       image: "",
-//       businessType: "Importer, Supplier",
-//       material: "Marble",
-//       shape: "Slab",
-//       application: "Luxury Flooring",
-//       feature: "Premium Shine, High Strength",
-//       thickness: "20 MM",
-//       surface: "Polished",
-//       origin: "Italy"
-//     },
-//     spanish: {
-//       name: "Spanish Marble",
-//       priceFrom: 110,
-//       priceTo: 170,
-//       moq: 1800,
-//       image: "",
-//       businessType: "Importer",
-//       material: "Marble",
-//       shape: "Rectangular",
-//       application: "Interiors",
-//       feature: "Elegant Texture",
-//       thickness: "18 MM",
-//       surface: "Polished",
-//       origin: "Spain"
-//     },
-//     turkish: {
-//       name: "Turkish Marble",
-//       priceFrom: 95,
-//       priceTo: 160,
-//       moq: 1700,
-//       image: "",
-//       businessType: "Supplier",
-//       material: "Marble",
-//       shape: "Slab",
-//       application: "Wall Cladding",
-//       feature: "Natural Finish, Rich Texture",
-//       thickness: "16 MM",
-//       surface: "Polished",
-//       origin: "Turkey"
-//     }
-//   },
-//   granite: {
-//     'red-granite': {
-//       name: "Red Granite",
-//       priceFrom: 70,
-//       priceTo: 100,
-//       moq: 2200,
-//       image: "",
-//       businessType: "Manufacturer",
-//       material: "Granite",
-//       shape: "Tile",
-//       application: "Exterior Cladding",
-//       feature: "Durable, Scratch Resistant",
-//       thickness: "18 MM",
-//       surface: "Flamed",
-//       origin: "India"
-//     },
-//     'black-galaxy': {
-//       name: "Black Galaxy",
-//       priceFrom: 85,
-//       priceTo: 115,
-//       moq: 2500,
-//       image: "",
-//       businessType: "Exporter",
-//       material: "Granite",
-//       shape: "Slab",
-//       application: "Kitchen Countertops",
-//       feature: "Sparkling Surface",
-//       thickness: "18 MM",
-//       surface: "Polished",
-//       origin: "India"
-//     },
-//     'kashmir-white': {
-//       name: "Kashmir White",
-//       priceFrom: 75,
-//       priceTo: 105,
-//       moq: 2300,
-//       image: "",
-//       businessType: "Supplier",
-//       material: "Granite",
-//       shape: "Rectangular",
-//       application: "Floors and Walls",
-//       feature: "Elegant, Long-Lasting",
-//       thickness: "16 MM",
-//       surface: "Polished",
-//       origin: "India"
-//     }
-//   },
-//   sandstone: {
-//     teakwood: {
-//       name: "Teakwood Sandstone",
-//       priceFrom: 45,
-//       priceTo: 75,
-//       moq: 1600,
-//       image: "",
-//       businessType: "Manufacturer",
-//       material: "Sandstone",
-//       shape: "Tile",
-//       application: "Wall Cladding, Exterior",
-//       feature: "Natural Finish, Unique Grain",
-//       thickness: "20 MM",
-//       surface: "Natural",
-//       origin: "India"
-//     },
-//     rainbow: {
-//       name: "Rainbow Sandstone",
-//       priceFrom: 50,
-//       priceTo: 80,
-//       moq: 1700,
-//       image: "",
-//       businessType: "Exporter",
-//       material: "Sandstone",
-//       shape: "Slab",
-//       application: "Garden Path, Exterior",
-//       feature: "Colorful Stripes",
-//       thickness: "20 MM",
-//       surface: "Sawn",
-//       origin: "India"
-//     },
-//     dholpur: {
-//       name: "Dholpur Sandstone",
-//       priceFrom: 40,
-//       priceTo: 70,
-//       moq: 1500,
-//       image: "",
-//       businessType: "Supplier",
-//       material: "Sandstone",
-//       shape: "Block",
-//       application: "Heritage Building",
-//       feature: "Durable, Heritage Look",
-//       thickness: "22 MM",
-//       surface: "Rough",
-//       origin: "India"
-//     }
-//   },
-//   tiles: {
-//     ceramic: {
-//       name: "Ceramic Tile",
-//       priceFrom: 25,
-//       priceTo: 45,
-//       moq: 1000,
-//       image: "",
-//       businessType: "Manufacturer",
-//       material: "Ceramic",
-//       shape: "Square",
-//       application: "Interior Flooring",
-//       feature: "Glossy, Water-Resistant",
-//       thickness: "10 MM",
-//       surface: "Glossy",
-//       origin: "India"
-//     },
-//     porcelain: {
-//       name: "Porcelain Tile",
-//       priceFrom: 35,
-//       priceTo: 55,
-//       moq: 1200,
-//       image: "",
-//       businessType: "Supplier",
-//       material: "Porcelain",
-//       shape: "Rectangular",
-//       application: "Bathroom, Kitchen",
-//       feature: "Durable, Non-Slip",
-//       thickness: "12 MM",
-//       surface: "Matte",
-//       origin: "India"
-//     },
-//     vitrified: {
-//       name: "Vitrified Tile",
-//       priceFrom: 30,
-//       priceTo: 50,
-//       moq: 1300,
-//       image: "",
-//       businessType: "Exporter",
-//       material: "Vitrified",
-//       shape: "Square",
-//       application: "Commercial Flooring",
-//       feature: "High Gloss, Anti-Stain",
-//       thickness: "10 MM",
-//       surface: "Glossy",
-//       origin: "India"
-//     }
-//   }
-// };
-
-
-
-
-
 export const productData = {
   "marble": {
     "makrana-pink": {
@@ -1835,4 +1578,96 @@ export const productData = {
       "origin": "Indian"
     }
   },
+  "importedmarble": {
+    "fantasy-grey": {
+      "name": "Fantasy Grey",
+      "priceFrom": 0,
+      "priceTo": 100,
+      "moq": 0,
+      "image": "",
+      "businessType": "",
+      "material": "granite",
+      "shape": "",
+      "application": "",
+      "feature": "Polished",
+      "thickness": "15mm",
+      "surface": "Polished, Matte",
+      "origin": "Indian"
+    },
+     "peitra-grey": {
+      "name": "Peitra Grey",
+      "priceFrom": 0,
+      "priceTo": 100,
+      "moq": 0,
+      "image": "",
+      "businessType": "",
+      "material": "granite",
+      "shape": "",
+      "application": "",
+      "feature": "Polished",
+      "thickness": "15mm",
+      "surface": "Polished, Matte",
+      "origin": "Indian"
+    },
+     "william-grey": {
+      "name": "William Grey",
+      "priceFrom": 0,
+      "priceTo": 100,
+      "moq": 0,
+      "image": "",
+      "businessType": "",
+      "material": "granite",
+      "shape": "",
+      "application": "",
+      "feature": "Polished",
+      "thickness": "15mm",
+      "surface": "Polished, Matte",
+      "origin": "Indian"
+    },
+     "bottochino-beige": {
+      "name": "Bottochino Beige",
+      "priceFrom": 0,
+      "priceTo": 100,
+      "moq": 0,
+      "image": "",
+      "businessType": "",
+      "material": "granite",
+      "shape": "",
+      "application": "",
+      "feature": "Polished",
+      "thickness": "15mm",
+      "surface": "Polished, Matte",
+      "origin": "Indian"
+    },
+     "bracia-beige": {
+      "name": "Bracia Beige",
+      "priceFrom": 0,
+      "priceTo": 100,
+      "moq": 0,
+      "image": "",
+      "businessType": "",
+      "material": "granite",
+      "shape": "",
+      "application": "",
+      "feature": "Polished",
+      "thickness": "15mm",
+      "surface": "Polished, Matte",
+      "origin": "Indian"
+    },
+     "dyna-beige": {
+      "name": "Dyna Beige",
+      "priceFrom": 0,
+      "priceTo": 100,
+      "moq": 0,
+      "image": "",
+      "businessType": "",
+      "material": "granite",
+      "shape": "",
+      "application": "",
+      "feature": "Polished",
+      "thickness": "15mm",
+      "surface": "Polished, Matte",
+      "origin": "Indian"
+    },
+  }
 }
