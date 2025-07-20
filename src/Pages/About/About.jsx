@@ -12,9 +12,17 @@ const About = () => {
         <div className={styles.textBlock}>
           <h2>Welcome to JK GRANI MARMO</h2>
           <p>
-            JK GRANI MARMO is a leading manufacturer, exporter, and supplier of premium granite slabs including Majestic 3D Black, Jeerawal, Alphonso Brown, Coral Pink, Rajasthan Black, Electro Brown, and many more.
-            Established in 2022, the company has provided quality products worldwide, backed by years of excellence, modern infrastructure, and a dedicated team.
+            At JK Granimarmo, we breathe life into stone – offering premium
+            Granite, Marble (Indian & Imported), Sandstone, and Tiles that blend
+            timeless beauty with modern durability. With over 20 years of
+            legacy, we are proud to be a trusted name among architects,
+            builders, and homeowners across India. Whether it’s Italian
+            elegance, Rajasthan’s richness, or contemporary tiles, our curated
+            collections elevate every design vision. We deliver factory-direct
+            pricing, unmatched craftsmanship, and end-to-end solutions for
+            floors and walls
           </p>
+          <span>✨ JK Granimarmo – where natural stone becomes soulful art.</span>
         </div>
         <img src="/Images/about-as.jpg" alt="JK Grani Marmo Factory" />
       </section>
@@ -23,12 +31,18 @@ const About = () => {
         <div className={styles.card}>
           <img src="/Images/visionImg.jpg" alt="Vision" />
           <h3>Our Vision</h3>
-          <p>To be the leading provider of innovative and reliable products and services that exceed customer expectations.</p>
+          <p>
+            To be the leading provider of innovative and reliable products and
+            services that exceed customer expectations.
+          </p>
         </div>
         <div className={styles.card}>
           <img src="/Images/missionImg.jpg" alt="Mission" />
           <h3>Our Mission</h3>
-          <p>To deliver the highest quality products and services, cultivating a culture of excellence, ethics, and continuous innovation.</p>
+          <p>
+            To deliver the highest quality products and services, cultivating a
+            culture of excellence, ethics, and continuous innovation.
+          </p>
         </div>
       </section>
 
@@ -37,8 +51,11 @@ const About = () => {
         <div className={styles.textBlock}>
           <h2>Our Manufacturing Facility</h2>
           <p>
-            Our facility is equipped with state-of-the-art machinery, employing advanced cutting and polishing techniques to produce durable and aesthetically superior granite slabs.
-            Staffed by skilled professionals, we ensure every product meets global quality standards.
+            Our facility is equipped with state-of-the-art machinery, employing
+            advanced cutting and polishing techniques to produce durable and
+            aesthetically superior granite slabs. Staffed by skilled
+            professionals, we ensure every product meets global quality
+            standards.
           </p>
         </div>
       </section>
@@ -47,7 +64,10 @@ const About = () => {
         <div className={styles.textBlock}>
           <h2>Meet Our Leadership</h2>
           <p>
-            Mr. Sandeep Kumar Mehta and Mr. Nand Kishore Vaishnav are the visionaries behind JK GRANI MARMO. Their experience and mentorship have built a company culture rooted in quality, trust, and continuous growth.
+            Mr. Sandeep Kumar Mehta and Mr. Nand Kishore Vaishnav are the
+            visionaries behind JK GRANI MARMO. Their experience and mentorship
+            have built a company culture rooted in quality, trust, and
+            continuous growth.
           </p>
         </div>
         <img src="/Images/teamImg.jpg" alt="Our Team" />

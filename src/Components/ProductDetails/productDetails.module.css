@@ -100,3 +100,39 @@
   object-fit: cover;
   border-radius: 6px;
 }
+
+
+.skeletonBox {
+  background: #ddd;
+  height: 300px;
+}
+
+.skeletonTitle {
+  height: 28px;
+  background: #e0e0e0;
+  width: 60%;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.skeletonLine {
+  height: 18px;
+  background: #e0e0e0;
+  width: 80%;
+  margin-bottom: 8px;
+  border-radius: 4px;
+}
+
+.skeletonLineSmall {
+  height: 14px;
+  background: #ececec;
+  width: 45%;
+  border-radius: 4px;
+}
+
+.skeletonBtn {
+  height: 36px;
+  width: 120px;
+  background: #ccc;
+  border-radius: 6px;
+}

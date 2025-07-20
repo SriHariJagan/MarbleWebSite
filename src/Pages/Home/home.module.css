@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
 
 .heroSection {
   position: relative;
@@ -9,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .video {
@@ -19,7 +19,7 @@
   height: 100vh;
   object-fit: cover;
   transform: translate(-50%, -50%);
-  z-index: -1;
+  z-index: -2;
 }
 
 .overlay {
@@ -28,8 +28,8 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.4); /* dark overlay for contrast */
-  z-index: 0;
+  background: rgba(0, 0, 0, 0.5); /* Slightly darker for better contrast */
+  z-index: -1;
 }
 
 .content {
@@ -40,21 +40,36 @@
   transition: opacity 0.6s ease, transform 0.6s ease;
   opacity: 1;
   transform: translateY(0);
+  max-width: 1200px;
 }
 
 .content.hide {
   opacity: 0;
   transform: translateY(-30px);
+  pointer-events: none;
 }
 
-
 .content h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .content p {
-  font-size: 1.3rem;
-  margin-top: 1rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.6;
+  margin: 1rem auto 0;
+  max-width: 90%;
 }
 
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+
+  .content p {
+    max-width: 90%;
+    text-align: justify;
+  }
+}

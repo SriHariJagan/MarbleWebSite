@@ -24,6 +24,17 @@ const Footer = () => {
         ))}
       </div>
 
+      <div className={styles.associatedSection}>
+        <h4>Asso. Concern :</h4>
+        <ul className={styles.associatedList}>
+          <li>PRIYA MARBLES</li>
+          <li>AKSHAY MARBLE SUPPLIERS</li>
+          <li>SHRI KRISHNA STONEX</li>
+          <li>SHUBHAM MARBLES</li>
+          <li>MONU MARBLES</li>
+        </ul>
+      </div>
+
       <div className={styles.mapSection}>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3566.704267410353!2d74.84740807488508!3d26.625924472357507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396bf1834ac2a471%3A0xbb07b44f710466d7!2sJK%20Grani%20Marmo!5e0!3m2!1sen!2sin!4v1752230576881!5m2!1sen!2sin"
@@ -64,15 +75,15 @@ const Footer = () => {
             >
               <Youtube size={24} />
             </a>
-            {/* <a
-              href="https://www.linkedin.com/"
+            <a
+              href="https://in.linkedin.com/in/jk-grani-marmo-38239926a"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
               className={`${styles.iconCircle} ${styles.linkedin}`}
             >
               <Linkedin size={24} />
-            </a> */}
+            </a>
             <a
               href="https://www.instagram.com/"
               target="_blank"
