@@ -104,14 +104,15 @@
 
 
 .associatedSection {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 2rem auto;
-  font-family: 'Lato', 'Segoe UI', sans-serif;
   color: var(--primary-text);
 }
 
 .associatedSection h4 {
-  color: #d3b169; /* goldish color like in the image */
+  color: #0077B5;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -120,21 +121,22 @@
 }
 
 .associatedList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  font-size: .9rem;
-  font-weight: 500;
-  color: #fff;
+  margin: 0;
+  font-weight: 600;
+  text-align: center;
 }
+
 
 @media (max-width: 600px) {
   .associatedList {
-    font-size: 0.9rem;
-    gap: 0.3rem;
+    gap: 0.5rem;
+    font-size: 12px;
   }
 
   .associatedSection h4 {
