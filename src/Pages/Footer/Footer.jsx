@@ -27,11 +27,11 @@ const Footer = () => {
       <div className={styles.associatedSection}>
         <h4>Asso. Concern :</h4>
         <ul className={styles.associatedList}>
-          <li>PRIYA MARBLES</li>
-          <li>AKSHAY MARBLE SUPPLIERS</li>
-          <li>SHRI KRISHNA STONEX</li>
-          <li>SHUBHAM MARBLES</li>
-          <li>MONU MARBLES</li>
+          <li>PRIYA MARBLES <span className={styles.pipe}>|</span></li> 
+          <li>AKSHAY MARBLE SUPPLIERS <span className={styles.pipe}>|</span></li>
+          <li>SHRI KRISHNA STONEX <span className={styles.pipe}>|</span></li>
+          <li>SHUBHAM MARBLES <span className={styles.pipe}>|</span></li>
+          <li>MONU MARBLES <span className={styles.pipe}>|</span></li>
         </ul>
       </div>
 
