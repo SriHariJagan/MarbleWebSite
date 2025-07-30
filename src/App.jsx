@@ -36,7 +36,7 @@ const App = () => {
   const closeForm = () => setShowForm(false);
 
   useEffect(() => {
-    const MIN_LOAD_TIME = 5000;
+    const MIN_LOAD_TIME = 2000;
     const startTime = Date.now();
 
     const handleLoad = () => {
