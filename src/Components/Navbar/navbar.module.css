@@ -50,9 +50,11 @@
   color: var(--active-link);
 }
 
+
 .dropdownWrapper {
   position: relative;
 }
+
 
 .dropdownTitle {
   display: flex;
@@ -64,29 +66,43 @@
 .dropdown {
   position: absolute;
   top: 100%;
-  right: -10px;
+  right: -50px;
   background: var(--dropdown-bg);
   margin-top: 15px;
   padding: .2rem;
   border-radius: 6px;
-  min-width: 200px;
+  min-width: 180px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   z-index: 99;
 
-  max-height: 300px; /* or any value that fits your design */
+}
+
+.addBar{ 
+  max-height: 400px;
   overflow-y: auto;
 }
 
-.dropdown li {
+.activeSubcategory{
+  color: var(--active-link) !important;
+}
+
+.dropdown .addBar li {
   margin: 0 1.5rem;
   padding: .8rem 0;
 }
 
-.dropdown li a {
+.dropdown .addBar li a {
   color: var(--primary-text);
   font-size: 0.95rem;
+}
+
+.chevronRight{
+  position: relative;
+  top: 2px;
+  left: 10px;
+  
 }
 
 .searchIcon {
@@ -124,7 +140,7 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: -8px;
+ 
   width: 100%;
   height: 2px;
   background-color: var(--active-link);
@@ -217,4 +233,66 @@
     bottom: -10px;
   }
 
+}
+
+
+/* Add these styles to your existing navbar.module.css */
+
+/* .subcategoryItem {
+  position: relative;
+} */
+
+.chevronRight {
+  margin-left: auto;
+  opacity: 0.7;
+}
+
+.childrenDropdown {
+  position: absolute;
+  margin-top: 8px;
+  left: 170px;
+  top: 0;
+  background: var(--dropdown-bg);
+  margin-left: 8px;
+  padding: 0.2rem;
+  border-radius: 6px;
+  min-width: 150px;
+  /* box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); */
+  display: flex;
+  flex-direction: column;
+  z-index: 98;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.childrenDropdown li {
+  margin: 0 1rem;
+  padding: 0.6rem 0;
+}
+
+.childrenDropdown li a {
+  color: var(--primary-text);
+  font-size: 0.9rem;
+  display: block;
+}
+
+.subcategoryItem > a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Mobile styles for nested navigation */
+.mobileList li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .childrenDropdown {
+    display: none; /* Hide nested dropdowns on mobile, use navigation instead */
+  }
 }

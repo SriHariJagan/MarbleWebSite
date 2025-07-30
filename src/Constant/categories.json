@@ -2,38 +2,39 @@
   {
     "name": "Marble",
     "subcategories": [
-      "Makrana-Pink",
-      "Silver-Storm",
-      "Burberry-Grey"
+      { "name": "Makrana", "children": ["Pink"] },     
+      { "name": "Silver", "children": ["Storm"] },
+      { "name": "Burberry", "children": ["Grey"] }
     ]
   },
   {
     "name": "Imported Marble",
     "subcategories": [
-      "Fantasy-Grey",
-      "Peitra-Grey",
-      "William-Grey",
-      "Bottochino-Beige",
-      "Bracia-Beige",
-      "Dyna-Beige"
+      { "name": "Fantasy", "children": ["Grey"] },
+      { "name": "Peitra", "children": ["Grey"] },
+      { "name": "William", "children": ["Grey"] },
+      { "name": "Bottochino", "children": ["Beige"] },
+      { "name": "Bracia", "children": ["Beige"] },
+      { "name": "Dyna", "children": ["Beige"] }
     ]
   },
   {
-  "name": "Granite",
-  "subcategories": [
-    "Jirawal-White",
-    "Z-Black",
-    "Tiger-Skin",
-    "Tan-Brown"
-  ]
+    "name": "Granite",
+    "subcategories": [
+      { "name": "Jirawal", "children": ["White"] },
+      { "name": "Z", "children": ["Black"] },
+      { "name": "Tiger", "children": ["Skin"] },
+      { "name": "Tan", "children": ["Brown"] }
+    ]
   },
   {
     "name": "Sandstone",
-    "subcategories": [
-    ]
+    "subcategories": []
   },
   {
     "name": "Tiles",
-    "subcategories": []
+    "subcategories": [
+      
+    ]
   }
 ]
